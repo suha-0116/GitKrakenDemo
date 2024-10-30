@@ -10,6 +10,11 @@ public class GitHubKrakenDemo implements Runnable
         {
             t[i] = new Thread(new GitHubKrakenDemo());
             t[i].start();
+            try {
+                t[i].join();
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -24,4 +29,3 @@ public class GitHubKrakenDemo implements Runnable
         count++;
     }
 }
- 
