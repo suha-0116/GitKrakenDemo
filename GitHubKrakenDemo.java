@@ -1,6 +1,6 @@
 public class GitHubKrakenDemo implements Runnable
 {
-    long[] sums = new long[1000];
+    static long[] sums = new long[1000];
     int count = 0;
     public static void main (String[] args)
     {
@@ -15,6 +15,11 @@ public class GitHubKrakenDemo implements Runnable
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+        }
+        long totalsum = 0;
+        for (int i = 0; i < sums.length; i ++)
+        {
+            totalsum += sums[i];
         }
     }
 
