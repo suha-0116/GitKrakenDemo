@@ -4,7 +4,7 @@ public class GitHubKrakenDemo implements Runnable
     int count = 0;
     public static void main (String[] args)
     {
-
+        long startTime = System.currentTimeMillis();
         Thread[] t = new Thread[1000];
         for (int i = 0; i < t.length; i++)
         {
@@ -21,6 +21,11 @@ public class GitHubKrakenDemo implements Runnable
         {
             totalsum += sums[i];
         }
+
+        long endTime = System.currentTimeMillis();
+
+        long totalTime = endTime - startTime;
+        System.out.println(totalTime + " ms");
     }
 
     @Override
