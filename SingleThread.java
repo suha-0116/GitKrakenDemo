@@ -15,4 +15,7 @@ public class SingleThread
         System.out.println(totalTime + " ms");
     }
 
+    //The multi-thread solution is slower because the task is very simple and creating and destroying the threads
+    //causes overhead. 
+
 }
